@@ -10,8 +10,8 @@ function Header() {
   return (
     <header
       className={`${
-        pathname === "/" ? "bg-green-900 text-gray-200" : "bg-gray-200 text-gray-800"
-      }  sticky top-0 z-20 `}
+        pathname === "/" ? "bg-green-900 text-gray-200" : "bg-gray-100 text-gray-800"
+      }  sticky top-0 z-50 `}
     >
       <nav className="flex justify-between px-12 py-4 gap-8">
         <ul className="flex  gap-8 items-center text-1xl">
