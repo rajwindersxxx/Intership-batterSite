@@ -13,7 +13,7 @@ function SelectInput({ label, name, children }: props) {
     <label className="flex gap-2 flex-col " htmlFor="loanYears">
       {label && <span className={`font-bold`}>{label}</span>}
       <div
-        className={`border border-black  rounded-md  flex hover:ring ring-green-700 text-md  max-w-36 pr-4 gap-3 transition-all"
+        className={`border bg-white  border-black  rounded-md  flex hover:ring ring-green-700 text-md  max-w-36 pr-4 gap-3 transition-all"
         }`}
       >
         <select

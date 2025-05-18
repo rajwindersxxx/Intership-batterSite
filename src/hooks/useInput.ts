@@ -13,7 +13,7 @@ function useInput(name: string) {
     dispatch(
       updateFields({
         field: name as keyof InitialState,
-        value: parseFloat(e.target.value),
+        value: parseFloat(e.target.value) || 0,
       })
     );
   }

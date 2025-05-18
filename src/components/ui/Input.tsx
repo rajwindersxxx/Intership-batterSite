@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import useInput from "../../hooks/useInput";
 interface props {
   variant: "percent" | "money" | "primary" | "secondary";
@@ -15,13 +16,18 @@ function Input({
   ...props
 }: props) {
   const { value, handleChange } = useInput(name);
-  console.log(value);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleFocus = () => {
+      inputRef?.current?.select();
+
+  };
   if (variant === "primary")
     return (
-      <label className="flex gap-2 flex-col ">
+      <label className="flex gap-2 flex-col">
         {label && <span className={`font-bold`}>{label}</span>}
         <div
-          className={`border border-black  rounded-md  flex hover:ring ring-green-700 transition-all ${
+          className={`border border-black  rounded-md  flex hover:ring ring-green-700 transition-all  bg-white  ${
             size === "big"
               ? "text-3xl font-bold max-w-72 p-4  gap-4 "
               : "text-md  max-w-36 p-3 gap-3"
@@ -29,12 +35,14 @@ function Input({
         >
           $
           <input
+            ref={inputRef}
             type={type}
             id="home_price"
             name={name}
             className="w-full outline-none "
             value={value}
             onChange={handleChange}
+            onFocus={handleFocus}
             {...props}
           />
         </div>
@@ -45,7 +53,7 @@ function Input({
       <label className="flex gap-2 flex-col ">
         {label && <span className={`font-bold`}>{label}</span>}
         <div
-          className={`border border-black  rounded-md  flex hover:ring ring-green-700  transition-all ${
+          className={`border border-black  rounded-md  flex hover:ring ring-green-700  transition-all  bg-white  ${
             size === "big"
               ? "text-3xl font-bold max-w-72 p-4  gap-4 "
               : "text-md  max-w-36 p-3 gap-3"
@@ -58,6 +66,8 @@ function Input({
             className="w-full outline-none "
             value={value}
             onChange={handleChange}
+            ref={inputRef}
+            onFocus={handleFocus}
             {...props}
           />
         </div>

@@ -4,7 +4,6 @@ import PrimaryButton from "../ui/PrimaryButton";
 import SecondaryButton from "../ui/SecondaryButton";
 import { Link, useLocation } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
-import SideNav from "../ui/SideNav";
 import { useUI } from "../context/UIContext";
 import { useEffect } from "react";
 import navItems from "../../data/navData..json"
@@ -25,7 +24,7 @@ function Header() {
         isHeroVisible && pathname == "/"
           ? "bg-green-900 text-gray-200"
           : "bg-white text-gray-800"
-      }  sticky top-0 z-40 transition-all `}
+      }  sticky top-0 z-40 transition-all  `}
     >
       <nav className="flex justify-between md:px-12 px-4 py-4 gap-8">
         <ul className="flex  gap-8 items-center text-1xl ">
@@ -57,7 +56,6 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <SideNav />
     </header>
   );
 }

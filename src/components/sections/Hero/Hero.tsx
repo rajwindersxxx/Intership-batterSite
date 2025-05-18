@@ -13,7 +13,7 @@ function Hero() {
         <h1 className=" md:text-8xl text-5xl font-bold text-green-400 text-center">
           Mortgages made simple
         </h1>
-        <div className="flex justify-between container max-w-[60%] items-center md:flex-row flex-col h-full md:pb-0 pb-12">
+        <div className="flex justify-between container max-w-[60%]  md:items-start items-center  md:flex-row flex-col h-full md:pb-0 pb-12">
           <div className="flex flex-col gap-2 justify-center items-center">
             <PrimaryButton className="text-xl font-bold px-12 py-4">
               Start my approval

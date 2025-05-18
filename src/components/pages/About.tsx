@@ -8,7 +8,6 @@ function About() {
       <HeroStart />
       <AboutCEO />
       <ChangingThings />
-      <h2 className="text-xl text-center p-4">COMING SOON</h2>
     </div>
   );
 }
