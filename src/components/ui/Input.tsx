@@ -1,3 +1,4 @@
+import useInput from "../../hooks/useInput";
 interface props {
   variant: "percent" | "money" | "primary" | "secondary";
   size?: "big" | "small";
@@ -5,7 +6,16 @@ interface props {
   name: string;
   label?: string;
 }
-function Input({ variant, size = "small", type, name,label, ...props }: props) {
+function Input({
+  variant,
+  size = "small",
+  type,
+  name,
+  label,
+  ...props
+}: props) {
+  const { value, handleChange } = useInput(name);
+  console.log(value);
   if (variant === "primary")
     return (
       <label className="flex gap-2 flex-col ">
@@ -22,9 +32,9 @@ function Input({ variant, size = "small", type, name,label, ...props }: props) {
             type={type}
             id="home_price"
             name={name}
-            defaultValue="4235"
             className="w-full outline-none "
-            value={2334}
+            value={value}
+            onChange={handleChange}
             {...props}
           />
         </div>
@@ -41,14 +51,13 @@ function Input({ variant, size = "small", type, name,label, ...props }: props) {
               : "text-md  max-w-36 p-3 gap-3"
           }`}
         >
-
           <input
             type={type}
             id="home_price"
             name={name}
-            defaultValue="4235"
             className="w-full outline-none "
-            value={2334}
+            value={value}
+            onChange={handleChange}
             {...props}
           />
         </div>

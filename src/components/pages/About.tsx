@@ -1,6 +1,6 @@
-import AboutCEO from "../AboutCEO";
-import ChangingThings from "../ChangingThings";
-import HeroStart from "../HeroStart";
+import AboutCEO from "../sections/AboutCEO";
+import ChangingThings from "../sections/ChangingThings";
+import HeroStart from "../sections/Hero/HeroStart";
 
 function About() {
   return (

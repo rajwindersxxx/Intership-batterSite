@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Priya",
+    "img": "https://webneel.com/daily/sites/default/files/images/daily/05-2018/portrait-photography-by-dennis-drozhzhin.jpg",
+    "review": "This site looks incredibly clean and works seamlessly on mobile. Navigation is intuitive, and the loading speed is impressive. You can tell the developer paid attention to every detail.",
+    "author": "Priya Sharma, UX Designer, Mumbai"
+  },
+  {
+    "id": 2,
+    "name": "Anil",
+    "img": "https://www.cathysummers.com/images/20180525_035.jpg",
+    "review": "After using this portfolio as inspiration, I got feedback that my resume and project layout looked very professional. I landed my first freelance job within a month. Totally recommend this format!",
+    "author": "Anil Mehta, Frontend Developer, Delhi"
+  },
+  {
+    "id": 3,
+    "name": "Radhika",
+    "img": "https://media.istockphoto.com/id/1088909778/photo/portrait-of-handsome-smiling-young-man-studio-shot.jpg?s=612x612&w=0&k=20&c=989h9CKzvxQ7-hXUnl7sNeIjJZYkiys7re7083JT4Es=",
+    "review": "The project descriptions are short but effective, and the GitHub links were easy to follow. I especially liked the ‘Mapty’ app and how it explains the logic behind the scenes. It's rare to see this kind of clarity in beginner portfolios.",
+    "author": "Radhika Iyer, Software Mentor, Bangalore"
+  }
+]

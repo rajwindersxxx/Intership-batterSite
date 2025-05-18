@@ -1,19 +1,29 @@
-function SelectInput() {
+import React from "react";
+
+import useInput from "../../hooks/useInput";
+
+interface props {
+  label?: string;
+  name: string;
+  children: React.ReactNode;
+}
+function SelectInput({ label, name, children }: props) {
+  const { value, handleChange } = useInput(name);
   return (
     <label className="flex gap-2 flex-col " htmlFor="loanYears">
-      <span className={`font-bold`}>Length of loan (years)</span>
+      {label && <span className={`font-bold`}>{label}</span>}
       <div
-        className={`border border-black  rounded-md  flex hover:ring ring-green-700 text-md  max-w-36 p-3 gap-3 transition-all"
+        className={`border border-black  rounded-md  flex hover:ring ring-green-700 text-md  max-w-36 pr-4 gap-3 transition-all"
         }`}
       >
         <select
           id="loanYears"
-          defaultValue="4235"
-          className="w-full outline-none "
+          name={name}
+          className="w-full outline-none bg-white p-3 rounded-md"
+          value={value}
+          onChange={handleChange}
         >
-          <option value={5}>5</option>
-          <option value={10}>10</option>
-          <option value={15}>15</option>
+          {children}
         </select>
       </div>
     </label>

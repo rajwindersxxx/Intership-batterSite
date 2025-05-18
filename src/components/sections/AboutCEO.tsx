@@ -1,9 +1,9 @@
-import PrimaryButton from "./ui/PrimaryButton";
+import PrimaryButton from "../ui/PrimaryButton";
 
 function AboutCEO() {
   return (
-    <div className="grid grid-cols-2 gap-4 px-4 max-w-[80%] mx-auto h-[40.5rem] items-center">
-      <div>
+    <div className="flex lg:flex-row flex-col-reverse gap-8 px-4 max-w-[80%] mx-auto h-[50.5rem] items-center">
+      <div className="flex-1">
         <h2 className="text-3xl font-bold mb-12">The status quo is broken</h2>
         <p className="mb-8">
           The traditional processes around homeownership are opaque and
@@ -14,8 +14,8 @@ function AboutCEO() {
         </p>
         <PrimaryButton type="lessRounded">Read Vishal's story</PrimaryButton>
       </div>
-      <div className="justify-self-end">
-        <button className="relative w-[400px] h-[300px] overflow-hidden content-end">
+      <div className="flex  lg:justify-end  justify-start items-start lg:flex-1 w-full">
+        <button className="relative w-[25rem] h-[18.75rem] overflow-hidden content-end">
           <img
             src="./vishal-mission.webp"
             className="w-full h-full object-cover object-right"

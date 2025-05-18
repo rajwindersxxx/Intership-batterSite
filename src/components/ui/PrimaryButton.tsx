@@ -7,7 +7,7 @@ interface props {
   className?: string;
   type?: "lessRounded";
 }
-function PrimaryButton({ children, onClick, className = "p-4", type }: props) {
+function PrimaryButton({ children, onClick, className = "p-3", type }: props) {
   const { pathname } = useLocation();
   if (type === "lessRounded")
     return (
@@ -18,8 +18,8 @@ function PrimaryButton({ children, onClick, className = "p-4", type }: props) {
   return (
     <button
       onClick={onClick}
-      className={` bg-green-400 text-green-900   rounded-full  ${
-        pathname === "/" ? "hover:bg-transparent" : "hover:bg-green-800"
+      className={` bg-green-500 text-green-900   rounded-full text-lg  ${
+        pathname === "/" ? "hover:bg-transparent" : "hover:bg-green-600"
       } hover:text-white transition-all ${className}`}
     >
       {children}
