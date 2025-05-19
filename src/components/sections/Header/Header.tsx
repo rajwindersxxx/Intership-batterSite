@@ -1,13 +1,13 @@
 import { FaPhoneAlt } from "react-icons/fa";
-import Anchor from "../ui/Anchor";
-import PrimaryButton from "../ui/PrimaryButton";
-import SecondaryButton from "../ui/SecondaryButton";
+
 import { Link, useLocation } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useUI } from "../context/UIContext";
 import { useEffect } from "react";
-import navItems from "../../data/navData..json"
-
+import Anchor from "../../ui/Anchor";
+import SecondaryButton from "../../ui/SecondaryButton";
+import PrimaryButton from "../../ui/PrimaryButton";
+import navItems from "../../../data/navData..json"
+import { useUI } from "../../context/UIContext";
 function Header() {
   const { pathname } = useLocation();
   const { toggleSidebar, isHeroVisible, setHeroVisible } = useUI();

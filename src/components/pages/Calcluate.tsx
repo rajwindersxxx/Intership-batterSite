@@ -9,13 +9,13 @@ import SelectInput from "../ui/SelectInput";
 function Calculate() {
   const { monthlyPayment } = useAppSelector((state) => state.calculator);
   return (
-    <section className="   flex flex-col gap-8">
-      <div className="flex flex-col gap-8 bg-green-50 py-20 md:px-16 px-4">
+    <section className="   flex flex-col gap-4">
+      <div className="flex flex-col gap-12 bg-green-50 py-20 md:px-16 px-4">
         <h2 className="text-4xl  font-bold">Mortgage calculator</h2>
         <p className="md:w-[60%]">
-          Our mortgage calculator includes key factors like homeowners association
-          fees, property taxes, and private mortgage insurance (PMI). Get the
-          whole picture and calculate your total monthly payment.
+          Our mortgage calculator includes key factors like homeowners
+          association fees, property taxes, and private mortgage insurance
+          (PMI). Get the whole picture and calculate your total monthly payment.
         </p>
         <div className="flex justify-between items-center flex-wrap gap-4">
           <Input
@@ -27,15 +27,18 @@ function Calculate() {
           />
           <div className="flex flex-col gap-4">
             <p className="font-bold">Monthly Payment</p>
-            <p className="text-3xl font-bold">$ {monthlyPayment.toLocaleString()} / mo</p>
+            <p className="text-3xl font-bold">
+              $ {monthlyPayment.toLocaleString()} / mo
+            </p>
           </div>
           <PrimaryButton type="lessRounded">Get pre-approved</PrimaryButton>
         </div>
         <RangeInput min={50000} max={3000000} step={1000} name="homePrice" />
         {/* Second row */}
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-8 ">
-          <div className="flex  gap-8">
+        <div className="grid md:grid-cols-2 grid-cols-1 lg:gap-40  gap-8 ">
+          <div className="flex  gap-8 ">
             <Input
+              className="flex-1"
               variant="secondary"
               size="small"
               type="number"
@@ -43,6 +46,7 @@ function Calculate() {
               label="ZIP code"
             />
             <Input
+              className="flex-1"
               variant="secondary"
               size="small"
               type="number"
@@ -50,15 +54,16 @@ function Calculate() {
               label="Down payment"
             />
           </div>
-          <div className="flex  gap-8 md:justify-self-end ">
+          <div className="flex gap-8 ">
             <Input
+              className="flex-1"
               variant="secondary"
               size="small"
               type="number"
               name="interestRate"
               label="Interest rate"
             />
-            <SelectInput label="Length of loan (years)" name="loanYears">
+            <SelectInput label="Length of loan (years)" name="loanYears"  className="flex-1">
               <option value={30}>30</option>
               <option value={20}>20</option>
               <option value={15}>15</option>

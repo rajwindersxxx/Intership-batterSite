@@ -6,6 +6,7 @@ interface props {
   type: string;
   name: string;
   label?: string;
+  className?: string;
 }
 function Input({
   variant,
@@ -13,24 +14,24 @@ function Input({
   type,
   name,
   label,
+  className,
   ...props
 }: props) {
   const { value, handleChange } = useInput(name);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleFocus = () => {
-      inputRef?.current?.select();
-
+    inputRef?.current?.select();
   };
   if (variant === "primary")
     return (
-      <label className="flex gap-2 flex-col">
+      <label className={`flex gap-2 flex-col ${className}`}>
         {label && <span className={`font-bold`}>{label}</span>}
         <div
-          className={`border border-black  rounded-md  flex hover:ring ring-green-700 transition-all  bg-white  ${
+          className={`border border-black  rounded-md  flex hover:ring ring-green-700 transition-all  bg-white   ${
             size === "big"
-              ? "text-3xl font-bold max-w-72 p-4  gap-4 "
-              : "text-md  max-w-36 p-3 gap-3"
+              ? "text-3xl font-bold p-4 max-w-72  gap-4 "
+              : "text-md  p-3 gap-3"
           }`}
         >
           $
@@ -50,13 +51,13 @@ function Input({
     );
   if (variant === "secondary")
     return (
-      <label className="flex gap-2 flex-col ">
+      <label className={`flex gap-2 flex-col ${className}`}>
         {label && <span className={`font-bold`}>{label}</span>}
         <div
           className={`border border-black  rounded-md  flex hover:ring ring-green-700  transition-all  bg-white  ${
             size === "big"
-              ? "text-3xl font-bold max-w-72 p-4  gap-4 "
-              : "text-md  max-w-36 p-3 gap-3"
+              ? "text-3xl font-bold p-4  gap-4 "
+              : "text-md  p-3 gap-3"
           }`}
         >
           <input

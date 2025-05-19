@@ -1,5 +1,5 @@
 import Hero from "../sections/Hero/Hero";
-import Story from "../sections/Story";
+import Story from "../sections/Home/Story";
 
 function Home() {
   return (

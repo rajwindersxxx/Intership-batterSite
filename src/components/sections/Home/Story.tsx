@@ -1,8 +1,8 @@
 import { MdStar } from "react-icons/md";
 import { useState } from "react";
-import PrimaryButton from "../ui/PrimaryButton";
-import Card from "../ui/Card";
-import reviews from '../../data/reviews.json'
+import PrimaryButton from "../../ui/PrimaryButton";
+import Card from "../../ui/Card";
+import reviews from "../../../data/reviews.json";
 
 function Story() {
   const [selectedCard, setSelectedCard] = useState(1);
@@ -39,10 +39,10 @@ function Story() {
       </div>
       {/* story heading */}
       <div className="flex flex-col gap-8 md:items-start  flex-1">
-        <h2 className="md:text-8xl text-5xl font-bold">Find out why we're better</h2>
-        <PrimaryButton type="lessRounded">
-          See all our stories
-        </PrimaryButton>
+        <h2 className="md:text-8xl text-5xl font-bold">
+          Find out why we're better
+        </h2>
+        <PrimaryButton type="lessRounded">See all our stories</PrimaryButton>
         <div className="flex gap-1 items-center justify-center md:justify-start py-2">
           <MdStar className="h-5 w-5" />
           <span className="font-bold">Trustpilot Excellent 4.4</span> out of 5

@@ -30,14 +30,14 @@ function OtherCalculatorFields() {
         <label className="font-bold border-l-4 border-purple-800 px-2">
           Principal & interest
         </label>
-        <p className="font-bold text-xl w-36">${princeInterest.toLocaleString()}</p>
+        <p className="font-bold text-xl w-40">${princeInterest.toLocaleString()}</p>
       </div>
       {fields.map(({ label, borderColor, name }) => (
         <div className="flex justify-between items-center" key={name}>
           <label className={`font-bold border-l-4 ${borderColor} px-2`}>
             {label}
           </label>
-          <Input variant="primary" size="small" type="number" name={name} />
+          <Input variant="primary" size="small" type="number" name={name}  className="w-40"/>
         </div>
       ))}
     </div>

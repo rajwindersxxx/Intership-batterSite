@@ -1,5 +1,5 @@
-import AboutCEO from "../sections/AboutCEO";
-import ChangingThings from "../sections/ChangingThings";
+import AboutCEO from "../sections/About/AboutCEO";
+import ChangingThings from "../sections/About/ChangingThings";
 import HeroStart from "../sections/Hero/HeroStart";
 
 function About() {

@@ -1,4 +1,4 @@
-import PrimaryButton from "../ui/PrimaryButton";
+import PrimaryButton from "../../ui/PrimaryButton";
 
 function AboutCEO() {
   return (
